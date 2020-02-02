@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:number_recognizer/brain.dart';
 import 'package:number_recognizer/constant.dart';
 import 'package:number_recognizer/drawing_painter.dart';
 
@@ -13,6 +14,13 @@ class RecognizerScreen extends StatefulWidget {
 
 class _RecognizerScreen extends State<RecognizerScreen> {
   List<Offset> points = [];
+  AppBrain appBrain = AppBrain();
+
+  @override
+  void initState() {
+    super.initState();
+    appBrain.loadModel();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -50,6 +58,14 @@ class _RecognizerScreen extends State<RecognizerScreen> {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.delete),
+        onPressed: () {
+          setState(() {
+            points = List();
+          });
+        },
+      ),
     );
   }
 
@@ -71,10 +87,11 @@ class _RecognizerScreen extends State<RecognizerScreen> {
           );
         });
       },
-      onPanEnd: (DragEndDetails details) {
-        setState(() {
-          points.add(null);
-        });
+      onPanEnd: (DragEndDetails details) async {
+        points.add(null);
+        List predictions = await appBrain.processCanvasPoints(points);
+        print(predictions);
+        setState(() {});
       },
       child: ClipRect(
         child: CustomPaint(

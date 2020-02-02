@@ -1,12 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:number_recognizer/constant.dart';
-
-final Paint drawingPaint = Paint()
-  ..strokeCap = StrokeCap.square
-  ..isAntiAlias = kIsAntiAlias
-  ..color = kBlackBrushColor
-  ..strokeWidth = kStrokeWidth;
-
 class DrawingPainter extends CustomPainter {
   List<Offset> offsetPoints;
 
@@ -19,7 +12,7 @@ class DrawingPainter extends CustomPainter {
         canvas.drawLine(
           offsetPoints[i],
           offsetPoints[i + 1],
-          drawingPaint,
+          kDrawingPaint,
         );
       }
     }
