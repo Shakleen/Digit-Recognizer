@@ -22,3 +22,11 @@ final Paint kWhitePaint = Paint()
   ..strokeWidth = kStrokeWidth;
 
 final kBackgroundPaint = Paint()..color = kBrushBlack;
+
+const int kModelNumberOutputs = 10;
+const Color kBarColor = Colors.blue;
+const Color kBarBackgroundColor = Colors.transparent;
+const double kChartBarWidth = 22;
+const String kWaitingForInputHeaderString = 'Please draw a number in the box below';
+const String kWaitingForInputFooterString = 'Let me guess...';
+const String kGuessingInputString = 'The number you draw is';
