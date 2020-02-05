@@ -20,6 +20,6 @@ The app lets users draw digits on to a canvas. Then it tries to predict what dig
 
 # Preview
 <p float="left"> 
-    <img src="./preview/preview_1.jpg" alt="drawing"/>
-    <img src="./preview/preview_2.jpg" alt="drawing"/>
+    <img src="./preview/preview_1.jpg" alt="drawing" width="350"/>
+    <img src="./preview/preview_2.jpg" alt="drawing" width="350"/>
 </P>
