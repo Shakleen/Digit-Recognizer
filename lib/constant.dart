@@ -10,13 +10,13 @@ const Color kBrushBlack = Colors.black;
 const Color kBrushWhite = Colors.white;
 
 final Paint kDrawingPaint = Paint()
-  ..strokeCap = StrokeCap.square
+  ..strokeCap = StrokeCap.round
   ..isAntiAlias = kIsAntiAlias
   ..color = kBrushBlack
   ..strokeWidth = kStrokeWidth;
 
 final Paint kWhitePaint = Paint()
-  ..strokeCap = StrokeCap.square
+  ..strokeCap = StrokeCap.round
   ..isAntiAlias = kIsAntiAlias
   ..color = kBrushWhite
   ..strokeWidth = kStrokeWidth;

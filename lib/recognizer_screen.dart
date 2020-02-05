@@ -63,7 +63,6 @@ class _RecognizerScreen extends State<RecognizerScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     mainAxisAlignment: MainAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.max,
                     children: <Widget>[
                       Center(
                         child: Text(
